@@ -2,7 +2,7 @@ using System;
 using System.Xml;
 using System.Net;
 
-namespace CurrencyConverter
+namespace CurrencyConverter.Data
 {
     class Connection
     {

@@ -6,7 +6,7 @@ namespace CurrencyConverter.Data
 {
     public class CurrencyList
     {
-        private List<Currency> ListObj;
+        public List<Currency> ListObj { private set; get; }
 
         public CurrencyList(params Currency[] list)
         {
