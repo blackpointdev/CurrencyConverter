@@ -1,5 +1,6 @@
 ﻿using System;
 using CurrencyConverter.Data;
+using CurrencyConverter.Converter;
 
 namespace CurrencyConverter.UI
 {
@@ -14,6 +15,8 @@ namespace CurrencyConverter.UI
             // Parsing XML file.
             var parserXml = new ParserXml(connection.GetResource());
             var currencyList = parserXml.Parse();
+
+            Console.WriteLine(Converter.Convert(currencyList.ListObj[0], currencyList.ListObj[1], 20));
         }
     }
 }

@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CurrencyConverter.Data\CurrencyConverter.Data.csproj" />
+    <ProjectReference Include="..\CurrencyConverter.Converter\CurrencyConverter.Converter.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
