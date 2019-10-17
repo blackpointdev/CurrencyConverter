@@ -4,7 +4,7 @@ using System.Net;
 
 namespace CurrencyConverter.Data
 {
-    class Connection
+    public class Connection
     {
         public string Url { get; private set; }
 

@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "CurrencyConverter.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CurrencyConverter.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CurrencyConverter.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CurrencyConverter.Data/1.0.0": {
+      "type": "project",
+      "path": "../CurrencyConverter.Data/CurrencyConverter.Data.csproj",
+      "msbuildProject": "../CurrencyConverter.Data/CurrencyConverter.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "CurrencyConverter.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/blackpoint/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.UI/CurrencyConverter.UI.csproj",
+      "projectName": "CurrencyConverter.UI",
+      "projectPath": "/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.UI/CurrencyConverter.UI.csproj",
+      "packagesPath": "/home/blackpoint/.nuget/packages/",
+      "outputPath": "/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.UI/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/blackpoint/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Data/CurrencyConverter.Data.csproj": {
+              "projectPath": "/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Data/CurrencyConverter.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

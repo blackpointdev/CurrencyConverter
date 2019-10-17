@@ -1,0 +1,8 @@
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/bin/Debug/netstandard2.0/CurrencyConverter.Converter.deps.json
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/bin/Debug/netstandard2.0/CurrencyConverter.Converter.dll
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/bin/Debug/netstandard2.0/CurrencyConverter.Converter.pdb
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/obj/Debug/netstandard2.0/CurrencyConverter.Converter.csprojAssemblyReference.cache
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/obj/Debug/netstandard2.0/CurrencyConverter.Converter.AssemblyInfoInputs.cache
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/obj/Debug/netstandard2.0/CurrencyConverter.Converter.AssemblyInfo.cs
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/obj/Debug/netstandard2.0/CurrencyConverter.Converter.dll
+/home/blackpoint/dev/CurrencyConverter/src/CurrencyConverter.Converter/obj/Debug/netstandard2.0/CurrencyConverter.Converter.pdb

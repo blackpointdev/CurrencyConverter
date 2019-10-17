@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "CurrencyConverter.UI/1.0.0": {
+        "dependencies": {
+          "CurrencyConverter.Data": "1.0.0"
+        },
+        "runtime": {
+          "CurrencyConverter.UI.dll": {}
+        }
+      },
+      "CurrencyConverter.Data/1.0.0": {
+        "runtime": {
+          "CurrencyConverter.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CurrencyConverter.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CurrencyConverter.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
