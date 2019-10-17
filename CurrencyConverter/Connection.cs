@@ -13,7 +13,7 @@ namespace CurrencyConverter
             this.Url = Url;
         }
 
-        public XmlDocument GetData()
+        public XmlDocument GetResource()
         {
             string xmlStr;
             using(var wc = new WebClient())
