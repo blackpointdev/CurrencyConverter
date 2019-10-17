@@ -10,7 +10,7 @@ public class ParserXml : IParser
     {
         this.xmlDoc = xmlDoc;
     }
-    public void Parse()
+    public CurrencyList Parse()
     {
         Console.WriteLine("Parsing...");
         CurrencyList currencyList = new CurrencyList();
@@ -28,6 +28,6 @@ public class ParserXml : IParser
             currencyList.AddCurrency(currency);
         }
 
-        Console.WriteLine(currencyList.ListObj[1].Name);
+        return currencyList;
     }
 }

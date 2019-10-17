@@ -4,6 +4,6 @@ namespace CurrencyConverter.Data
 {
     interface IParser
     {
-        void Parse();
+        CurrencyList Parse();
     }
 }
