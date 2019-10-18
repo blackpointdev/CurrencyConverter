@@ -1,6 +1,6 @@
 ﻿using System;
 using CurrencyConverter.Data;
-using CurrencyConverter.Converter;
+using CurrencyConverter.Core;
 
 namespace CurrencyConverter.UI
 {
