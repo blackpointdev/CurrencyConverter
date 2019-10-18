@@ -12,7 +12,6 @@ public class ParserXml : IParser
     }
     public CurrencyList Parse()
     {
-        Console.WriteLine("Parsing...");
         CurrencyList currencyList = new CurrencyList();
 
         XmlNodeList nodes = xmlDoc.SelectNodes("tabela_kursow/pozycja"); // Possibly better to use LINQ to read XML here
