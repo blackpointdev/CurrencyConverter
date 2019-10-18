@@ -16,7 +16,7 @@ namespace CurrencyConverter.UI
             var parserXml = new ParserXml(connection.GetResource());
             var currencyList = parserXml.Parse();
 
-            Console.WriteLine(Converter.Convert(currencyList.ListObj[0], currencyList.ListObj[1], 20));
+            Console.WriteLine(Converter.Convert(currencyList[0], currencyList[1], 20));
         }
     }
 }

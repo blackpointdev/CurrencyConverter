@@ -6,7 +6,7 @@ namespace CurrencyConverter.Data
 {
     public class CurrencyList
     {
-        public List<Currency> ListObj { private set; get; }
+        private List<Currency> ListObj;
 
         public CurrencyList(params Currency[] list)
         {
@@ -28,6 +28,11 @@ namespace CurrencyConverter.Data
             {
                 ListObj.Remove(item);
             }
+        }
+
+        public Currency this[int i]
+        {
+            get { return ListObj[i]; }
         }
     }
 }
