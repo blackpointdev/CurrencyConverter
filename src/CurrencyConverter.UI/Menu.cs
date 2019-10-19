@@ -28,62 +28,59 @@ namespace CurrencyConverter.UI
                 Console.WriteLine(currencyList[i].Code + "\t" + currencyList[i].Name);
             }
 
-            Currency from_currency = null;
-            Currency to_currency = null;
-            double input_ammount = 0;
-
             Console.WriteLine("\nTIP: Type in currency code.");
             
-            while(true)
-            {
-                Console.Write("From: ");
-                string input_from = Console.ReadLine();
-
-                try
-                {
-                    from_currency = currencyList.FindCurrencyByCode(input_from);
-                }
-                catch(ArgumentNullException)
-                {
-                    Console.WriteLine("Can't find currency with given code. Try again.");
-                    continue;
-                }
-                break;
-            }
-
-            while(true)
-            {
-                Console.Write("To: ");
-                string input_to = Console.ReadLine();
-
-                try
-                {
-                    to_currency = currencyList.FindCurrencyByCode(input_to);
-                }
-                catch(ArgumentNullException)
-                {
-                    Console.WriteLine("Can't find currency with given code. Try again.");
-                    continue;
-                }
-                break;
-            }
+            Console.Write("From: ");
+            Currency from_currency = GetInputCurrency(currencyList);
+            Console.Write("To: ");
+            Currency to_currency = GetInputCurrency(currencyList);
+            Console.Write("Ammount: ");
+            double input_ammount = GetInputAmmount();
             
+            DisplayResults(from_currency, to_currency, input_ammount);
+        }
+
+        private Currency GetInputCurrency(CurrencyList currencyList)
+        {
             while(true)
             {
-                Console.Write("Ammount: ");
+                string input = Console.ReadLine();
+
                 try
                 {
-                    input_ammount = Convert.ToDouble(Console.ReadLine());
+                    return currencyList.FindCurrencyByCode(input);
+                }
+                catch(ArgumentNullException)
+                {
+                    Console.WriteLine("Can't find currency with given code. Try again.");
+                    continue;
+                }
+            }
+        }
+
+        private double GetInputAmmount()
+        {
+            while(true)
+            {
+                try
+                {
+                    return Convert.ToDouble(Console.ReadLine());
                 }
                 catch(FormatException)
                 {
                     Console.WriteLine("Incorrect input value, try again.");
                     continue;
                 }
-                break;
             }
+        }
 
-            Console.WriteLine("Result: " + Converter.Convert(from_currency, to_currency, input_ammount));
+        private void DisplayResults(Currency from, Currency to, double ammount)
+        {
+            Console.WriteLine("{0} exchange rate: 1 PLN = {1} {0}\n"
+                            + "{2} exchange rate: 1 PLN = {3} {2}", 
+                            from.Code, from.ExchangeRate, to.Code, to.ExchangeRate);
+            Console.WriteLine("Result: {0} {1} = {2} {3}", 
+                            ammount, from.Code, Math.Round(Converter.Convert(from, to, ammount), 2), to.Code);
         }
 
     }
