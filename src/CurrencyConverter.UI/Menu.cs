@@ -17,6 +17,8 @@ namespace CurrencyConverter.UI
             Console.WriteLine("Parsing XML file...");
             var parserXml = new ParserXml(connection.GetResource());
             var currencyList = parserXml.Parse();
+
+            currencyList.AddCurrency(new Currency("zloty polski", 1, "PLN", 1));
             
             Console.WriteLine("List of available currency:");
             Console.WriteLine("Code\tName");
@@ -26,18 +28,52 @@ namespace CurrencyConverter.UI
                 Console.WriteLine(currencyList[i].Code + "\t" + currencyList[i].Name);
             }
 
+            Currency from_currency = null;
+            Currency to_currency = null;
+            double input_ammount = 0;
+
             Console.WriteLine("\nTIP: Type in currency code.");
-            Console.Write("From: ");
-            string input_from = Console.ReadLine();
-            Console.Write("To: ");
-            string input_to = Console.ReadLine();
+            
+            while(true)
+            {
+                Console.Write("From: ");
+                string input_from = Console.ReadLine();
+
+                try
+                {
+                    from_currency = currencyList.FindCurrencyByCode(input_from);
+                }
+                catch(ArgumentNullException)
+                {
+                    Console.WriteLine("Can't find currency with given code. Try again.");
+                    continue;
+                }
+                break;
+            }
+
+            while(true)
+            {
+                Console.Write("To: ");
+                string input_to = Console.ReadLine();
+
+                try
+                {
+                    to_currency = currencyList.FindCurrencyByCode(input_to);
+                }
+                catch(ArgumentNullException)
+                {
+                    Console.WriteLine("Can't find currency with given code. Try again.");
+                    continue;
+                }
+                break;
+            }
             
             while(true)
             {
                 Console.Write("Ammount: ");
                 try
                 {
-                    double input_ammount = Convert.ToDouble(Console.ReadLine());
+                    input_ammount = Convert.ToDouble(Console.ReadLine());
                 }
                 catch(FormatException)
                 {
@@ -46,6 +82,8 @@ namespace CurrencyConverter.UI
                 }
                 break;
             }
+
+            Console.WriteLine("Result: " + Converter.Convert(from_currency, to_currency, input_ammount));
         }
 
     }

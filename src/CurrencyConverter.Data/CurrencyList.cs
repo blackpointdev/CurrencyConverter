@@ -43,6 +43,20 @@ namespace CurrencyConverter.Data
             }
         }
 
+        public Currency FindCurrencyByCode(string code)
+        {
+            var currency = ListObj.Find(item => item.Code.ToLower() == code.ToLower());
+            if (currency == null) 
+            {
+                throw new ArgumentNullException("Can't find currency with given code.");
+            }
+
+            else 
+            {
+                return currency;
+            }
+        }
+
         public Currency this[int i]
         {
             get { return ListObj[i]; }
